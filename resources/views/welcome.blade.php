@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @vite(['resources/css/app.css', 'resoucres/js/app.js' ])
+    @vite(['resources/css/app.css', 'resources/js/app.js' ])
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,8 @@
 
 </head>
 <body class="antialiased">
+<livewire:counter />
+<button onclick='shout()'>Test button</button>
 <div
     class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
     @if (Route::has('login'))
@@ -59,7 +61,7 @@
 
                         <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
 
-                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">something</p>
+                        <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Damn it</p>
                     </div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
