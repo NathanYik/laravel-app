@@ -2,9 +2,6 @@
 
 namespace App\Livewire;
 
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Foundation\Application;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
@@ -30,7 +27,6 @@ class FirstComponent extends Component
     public function getUserById(): void
     {
         $this->user = null;
-        $userIdToInt = (int)$this->userId;
         $foundUser = User::find($this->userId);
         if ($foundUser) {
             $this->user = $foundUser;

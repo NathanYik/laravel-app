@@ -1,5 +1,4 @@
 <div>
-    {{-- Do your work, then step back. --}}
     <h1>{{ $count }}</h1>
     <button class='big-shrug' wire:click="increment">Increment the counter!</button>
     <button class='big-shrug' wire:click="decrement">Decrement the counter!</button>
