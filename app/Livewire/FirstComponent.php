@@ -2,10 +2,12 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 
+#[Title('First Component')]
 class FirstComponent extends Component
 {
     public int $count = 0;

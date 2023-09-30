@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Home;
 use App\Livewire\FirstComponent;
 
 /*
@@ -14,8 +15,6 @@ use App\Livewire\FirstComponent;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Home::class);
 
 Route::get('/testing', FirstComponent::class);

@@ -4,7 +4,7 @@
     <h1>{{ $count }}</h1>
     <button x-on:click='$wire.count++'>Increment</button>
     <button x-on:click='$wire.count--'>Decrement</button>
-    <button wire:click='increment'>Worse increment</button>
+    <button wire:click="$set('count', 473)">Worse increment</button>
     <button wire:click='decrement'>Worse decrement</button>
     <button wire:click='doNothing'>Guess it actually does something</button>
     <button wire:click='getUsers'>Get the users</button>
@@ -19,12 +19,18 @@
     <h1>{{ $userId }}</h1>
     @if($users)
         @foreach($users as $user)
+            <h1>User:</h1>
             <h1>{{ $user->name }}: {{ $user->id }}</h1>
             <h2>{{ $user->email }}</h2>
+            @foreach($user->posts as $post)
+                <h2>{{ $post->content }}</h2>
+                <h2>{{ $post->likes->count() }}</h2>
+                <h2>{{ $post->comments->count() }}</h2>
+            @endforeach
         @endforeach
     @endif
     @if($user)
-        <h2>{{ $user->name }}: {{ $user->id }}</h2>
+        {{--        <h2>{{ $user->name }}: {{ $user->id }}</h2>--}}
     @else
         <h2>No user found</h2>
     @endif
