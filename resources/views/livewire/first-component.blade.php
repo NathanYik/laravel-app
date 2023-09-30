@@ -22,6 +22,7 @@
             <h1>User:</h1>
             <h1>{{ $user->name }}: {{ $user->id }}</h1>
             <h2>{{ $user->email }}</h2>
+            <h2>{{ $user->posts }}</h2>
             @foreach($user->posts as $post)
                 <h2>{{ $post->content }}</h2>
                 <h2>{{ $post->likes->count() }}</h2>
